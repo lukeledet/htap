@@ -19,6 +19,12 @@ defmodule Htap.Endpoint do
     plug Phoenix.CodeReloader
   end
 
+  defp copy_req_body(conn, _) do
+    {:ok, body, _} = Plug.Conn.read_body(conn)
+    Plug.Conn.put_private(conn, :raw_body, body)
+  end
+
+  plug :copy_req_body
   plug Plug.RequestId
   plug Plug.Logger
 

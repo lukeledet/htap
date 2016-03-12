@@ -1,5 +1,8 @@
 # Htap
 
+Uses a buggy but simple method to get the raw body mentioned here:
+https://github.com/phoenixframework/phoenix/issues/459
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`

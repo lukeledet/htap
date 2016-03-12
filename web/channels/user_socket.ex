@@ -2,7 +2,7 @@ defmodule Htap.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "rooms:*", Htap.RoomChannel
+  channel "taps:*", Htap.TapChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
